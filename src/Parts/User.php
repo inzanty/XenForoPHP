@@ -191,11 +191,11 @@ class User extends AbstractEndpoint
 		try
 		{
 			$request = $this->client->get('api/users/' . $userId . '/profile-posts', ['query' => ['page' => $page ?? 1]]);
-			echo $request->getBody();
+			return $request->getBody();
 		}
 		catch (RequestException $e)
 		{
-			echo $e->getResponse()->getBody()->getContents();
+			return $e->getResponse()->getBody()->getContents();
 		}
 	}
 }

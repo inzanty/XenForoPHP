@@ -12,6 +12,7 @@
 namespace XenForo;
 
 use LogicException;
+use XenForo\Parts\Index;
 use XenForo\Parts\User;
 
 class XenForo
@@ -22,7 +23,7 @@ class XenForo
 	/** @var string */
 	protected static string $domain;
 
-	/** @var int|null  */
+	/** @var int|null */
 	protected static ?int $userId;
 
 	/** @var bool */
@@ -82,6 +83,14 @@ class XenForo
 	public static function isBypass(): bool
 	{
 		return self::$bypass;
+	}
+
+	/**
+	 * @return Index
+	 */
+	public function index(): Index
+	{
+		return new Index();
 	}
 
 	/**

@@ -22,7 +22,7 @@ abstract class AbstractEndpoint
 	/** @var string */
 	protected string $domain;
 
-	/** @var int|null  */
+	/** @var int|null */
 	protected ?int $userId;
 
 	/** @var bool */
@@ -46,8 +46,8 @@ abstract class AbstractEndpoint
 	protected function setClient(): Client
 	{
 		return new Client([
-			'base_uri'    => $this->domain,
-			'headers'     => [
+			'base_uri' => $this->domain,
+			'headers'  => [
 				'XF-Api-Key'  => $this->apiKey,
 				'XF-Api-User' => $this->userId
 			]
