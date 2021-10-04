@@ -1,0 +1,23 @@
+{
+    "name": "inzanty/xenforo-php",
+    "description": "A library wrapper for XenForo REST-API.",
+    "authors": [
+        {
+            "name": "Nazar Nosko",
+            "email": "nosko.nazar@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "XenForo\\": "src"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3",
+        "friendsofphp/php-cs-fixer": "^3.1"
+    }
+}
