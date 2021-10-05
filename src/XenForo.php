@@ -12,6 +12,7 @@
 namespace XenForo;
 
 use LogicException;
+use XenForo\Parts\Auth;
 use XenForo\Parts\Index;
 use XenForo\Parts\User;
 
@@ -83,6 +84,14 @@ class XenForo
 	public static function isBypass(): bool
 	{
 		return self::$bypass;
+	}
+
+	/**
+	 * @return Auth
+	 */
+	public function auth(): Auth
+	{
+		return new Auth();
 	}
 
 	/**
